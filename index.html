@@ -5,6 +5,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="./css/index.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <style>
+      html,
+      body {
+        position: relative;
+        height: 100%;
+      }
+
+      body {
+        /* background: #eee; */
+        /* font-family: Helvetica Neue, Helvetica, Arial, sans-serif; */
+        font-size: 14px;
+        color: #000;
+        margin: 0;
+        padding: 0;
+      }
+
+      .swiper {
+        width: 100%;
+        height: 100%;
+      }
+
+      .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    </style>
   </head>
   <body>
     <header>
@@ -31,7 +72,7 @@
     <main class="home">
       <section class="hero container">
         <div class="hero__left">
-          <h2>  
+          <h2>
             Управление запасами <br />
             розничного магазина
           </h2>
@@ -140,8 +181,358 @@
             <button class="information__inner__card-btn">Подробнее</button>
           </div>
         </div>
+        <div class="container information__btm">
+          <div class="information__btm__card">
+            <div class="information__btm__card-gift">
+              <img src="./images/gift.svg" alt="" />
+              <p>
+                Подключи любой продукт на 1 месяц бесплатно и оцени наши
+                приемущества
+              </p>
+            </div>
+            <button>Подключить сейчас</button>
+          </div>
+        </div>
+      </section>
+      <section class="convenient">
+        <div class="convenient__wrapper container">
+          <h2>С нами удобнее</h2>
+          <div class="convenient__wrapper__cards">
+            <div class="convenient__wrapper__card">
+              <h3>Без 1С-Товары</h3>
+              <ul>
+                <li>
+                  <img src="./images/Vector.svg" alt="" />
+                  <span>Лишний товар складируется и не продается</span>
+                </li>
+                <li>
+                  <img src="./images/Vector.svg" alt="" />
+                  <span
+                    >Постоянно приходится думать какой продукт будет актуален, а
+                    какой стоит выводить из ассортимента</span
+                  >
+                </li>
+                <li>
+                  <img src="./images/Vector.svg" alt="" />
+                  <span>Лишний товар складируется и не продается</span>
+                </li>
+                <li>
+                  <img src="./images/Vector.svg" alt="" />
+                  <span
+                    >Постоянно приходится думать какой продукт будет актуален, а
+                    какой стоит выводить из ассортимента</span
+                  >
+                </li>
+                <li>
+                  <img src="./images/Vector.svg" alt="" />
+                  <span>Лишний товар складируется и не продается</span>
+                </li>
+                <li>
+                  <img src="./images/Vector.svg" alt="" />
+                  <span
+                    >Постоянно приходится думать какой продукт будет актуален, а
+                    какой стоит выводить из ассортимента</span
+                  >
+                </li>
+                <li>
+                  <img src="./images/Vector.svg" alt="" />
+                  <span>Лишний товар складируется и не продается</span>
+                </li>
+              </ul>
+            </div>
+            <div class="convenient__wrapper__card">
+              <h3>Без 1С-Товары</h3>
+              <ul>
+                <li>
+                  <img src="./images/tick.svg" alt="" />
+                  <span>Лишний товар складируется и не продается</span>
+                </li>
+                <li>
+                  <img src="./images/tick.svg" alt="" />
+                  <span
+                    >Постоянно приходится думать какой продукт будет актуален, а
+                    какой стоит выводить из ассортимента</span
+                  >
+                </li>
+                <li>
+                  <img src="./images/tick.svg" alt="" />
+                  <span>Лишний товар складируется и не продается</span>
+                </li>
+                <li>
+                  <img src="./images/tick.svg" alt="" />
+                  <span
+                    >Постоянно приходится думать какой продукт будет актуален, а
+                    какой стоит выводить из ассортимента</span
+                  >
+                </li>
+                <li>
+                  <img src="./images/tick.svg" alt="" />
+                  <span>Лишний товар складируется и не продается</span>
+                </li>
+                <li>
+                  <img src="./images/tick.svg" alt="" />
+                  <span
+                    >Постоянно приходится думать какой продукт будет актуален, а
+                    какой стоит выводить из ассортимента</span
+                  >
+                </li>
+                <li>
+                  <img src="./images/tick.svg" alt="" />
+                  <span>Лишний товар складируется и не продается</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="popular">
+        <div class="popular__wrapper container">
+          <div class="popular__wrapper-title">
+            <h2>Популярные продукты</h2>
+            <button>Все продукты</button>
+          </div>
+          <div class="swiper mySwiper swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide swiper__card">
+                <div class="swiper__card-title">
+                  <h3>1С-Товары 300</h3>
+                  <p>400 руб/мес</p>
+                </div>
+                <p>
+                  Прогноз спроса с использованием сервера прогнозирования
+                  (ограничение – 300 товаров) Контроль товарных остатков и
+                  автоматический заказ товаров (ограничение – 300 товаров)
+                  Анализ работы розничного магазина или сети магазинов
+                  Рекомендации по управлению ассортиментом (1С-Ритейл Чекер)
+                </p>
+                <div class="swiper__card-btn">
+                  <button>
+                    Подробнее <img src="./images/arrow.svg" alt="" />
+                  </button>
+                </div>
+              </div>
+              <div class="swiper-slide swiper__card">
+                <div class="swiper__card-title">
+                  <h3>1С-Товары 300</h3>
+                  <p>400 руб/мес</p>
+                </div>
+                <p>
+                  Прогноз спроса с использованием сервера прогнозирования
+                  (ограничение – 300 товаров) Контроль товарных остатков и
+                  автоматический заказ товаров (ограничение – 300 товаров)
+                  Анализ работы розничного магазина или сети магазинов
+                  Рекомендации по управлению ассортиментом (1С-Ритейл Чекер)
+                </p>
+                <div class="swiper__card-btn">
+                  <button>
+                    Подробнее <img src="./images/arrow.svg" alt="" />
+                  </button>
+                </div>
+              </div>
+              <div class="swiper-slide swiper__card">
+                <div class="swiper__card-title">
+                  <h3>1С-Товары 300</h3>
+                  <p>400 руб/мес</p>
+                </div>
+                <p>
+                  Прогноз спроса с использованием сервера прогнозирования
+                  (ограничение – 300 товаров) Контроль товарных остатков и
+                  автоматический заказ товаров (ограничение – 300 товаров)
+                  Анализ работы розничного магазина или сети магазинов
+                  Рекомендации по управлению ассортиментом (1С-Ритейл Чекер)
+                </p>
+                <div class="swiper__card-btn">
+                  <button>
+                    Подробнее <img src="./images/arrow.svg" alt="" />
+                  </button>
+                </div>
+              </div>
+              <div class="swiper-slide swiper__card">
+                <div class="swiper__card-title">
+                  <h3>1С-Товары 300</h3>
+                  <p>400 руб/мес</p>
+                </div>
+                <p>
+                  Прогноз спроса с использованием сервера прогнозирования
+                  (ограничение – 300 товаров) Контроль товарных остатков и
+                  автоматический заказ товаров (ограничение – 300 товаров)
+                  Анализ работы розничного магазина или сети магазинов
+                  Рекомендации по управлению ассортиментом (1С-Ритейл Чекер)
+                </p>
+                <div class="swiper__card-btn">
+                  <button>
+                    Подробнее <img src="./images/arrow.svg" alt="" />
+                  </button>
+                </div>
+              </div>
+              <div class="swiper-slide swiper__card">
+                <div class="swiper__card-title">
+                  <h3>1С-Товары 300</h3>
+                  <p>400 руб/мес</p>
+                </div>
+                <p>
+                  Прогноз спроса с использованием сервера прогнозирования
+                  (ограничение – 300 товаров) Контроль товарных остатков и
+                  автоматический заказ товаров (ограничение – 300 товаров)
+                  Анализ работы розничного магазина или сети магазинов
+                  Рекомендации по управлению ассортиментом (1С-Ритейл Чекер)
+                </p>
+                <div class="swiper__card-btn">
+                  <button>
+                    Подробнее <img src="./images/arrow.svg" alt="" />
+                  </button>
+                </div>
+              </div>
+              <div class="swiper-slide swiper__card">
+                <div class="swiper__card-title">
+                  <h3>1С-Товары 300</h3>
+                  <p>400 руб/мес</p>
+                </div>
+                <p>
+                  Прогноз спроса с использованием сервера прогнозирования
+                  (ограничение – 300 товаров) Контроль товарных остатков и
+                  автоматический заказ товаров (ограничение – 300 товаров)
+                  Анализ работы розничного магазина или сети магазинов
+                  Рекомендации по управлению ассортиментом (1С-Ритейл Чекер)
+                </p>
+                <div class="swiper__card-btn">
+                  <button>
+                    Подробнее <img src="./images/arrow.svg" alt="" />
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+          </div>
+        </div>
+      </section>
+      <section class="technical-support">
+        <div class="technical-support__wrapper container">
+          <div class="technical-support__left">
+            <h2>Предоставляем техподдержку для наших клиентов</h2>
+            <p>
+              Если у вас возникнут сложности с использованием 1С-Товары,
+              обращайтесь в нашу <br />
+              техподдержку. Техподдержка работает круглосуточно. Вы можете
+              связаться с нами <br />
+              любыми удобными для Вас способами. При использовании техпомощи
+              просим <br />
+              соблюдать
+              <span>правила обращения.</span>
+            </p>
+          </div>
+          <div class="technical-support__right">
+            <p class="technical-support__right__title">
+              Вы можете связаться с нами через <span>1С-Коннект</span> <br />
+              и
+              <span>1С-Товары. Поддержка пользователей</span>
+            </p>
+            <div class="technical-support__right__contact">
+              <div class="technical-support__right__contact-left">
+                <p>Телефон техподдержки</p>
+                <p>+7-495-111-00-10</p>
+              </div>
+              <div class="technical-support__right__contact-right">
+                <p>E-mail техподдержки</p>
+                <p>info@rozn.info</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="retail-stores">
+        <div class="retail-stores__wrapper container">
+          <div class="retail-stores__left">
+            <h2>Для розничных магазинов и ресторанов</h2>
+            <div class="retail-stores__left__imgs">
+              <img src="./images/stores-img.svg" alt="" />
+              <img src="./images/stores-img2.svg" alt="" />
+            </div>
+            <div class="retail-stores__left__mimgs">
+              <img src="./images/stores.svg" alt="" />
+            </div>
+          </div>
+          <div class="retail-stores__right">
+            <div class="retail-stores__right__card">
+              <h3>Получайте рекомендации по управлению ассортиментом</h3>
+              <p>
+                Для этого подключите бесплатно новый тариф «1С-Ритейл Чекер».
+                Каждую неделю вам на почту будет приходить письмо с
+                рекомендациями: какие товары необходимо срочно купить, чтобы
+                избежать упущенной прибыли из-за пустых полок; какие товары у
+                вас в избытке, а какие следует отнести к неликвидам; какие
+                товары стоит пересчитать, чтобы быть уверенным в правильности
+                учета.
+              </p>
+              <a href="#">
+                Подробнее о 1С-Ритейл Чекер
+                <img src="./images/arrow.svg" alt="" />
+              </a>
+            </div>
+            <div class="retail-stores__right__card">
+              <h3>Прогнозируйте спрос и управляйте запасами</h3>
+              <p>
+                Используйте 1С-Товары для более точного прогноза спроса.
+                1С-Товары учитывают средние продажи, тренды, периоды дефицита
+                товара (пробелы на полках), сезонность спроса, праздники,
+                распродажи, акции. Ежедневно 1С-Товары автоматически проверяют
+                минимальные остатки и своевременно отправляет заявку поставщику,
+                используя результаты прогноза. Так вы избежите как дефицита, так
+                и излишков товара в магазине.
+              </p>
+              <a href="#"
+                >Подробнее о 1С-Ритейл Чекер
+                <img src="./images/arrow.svg" alt=""
+              /></a>
+            </div>
+            <div class="retail-stores__right__card">
+              <h3>Планируйте ассортимент без ошибок</h3>
+              <p>
+                Узнайте, какие товары приносят вам прибыль и всегда должны быть
+                в ассортименте. И, наоборот, выводите из ассортимента товары с
+                низкой наценкой и оборачиваемостью.
+              </p>
+            </div>
+            <div class="retail-stores__right__card">
+              <h3>Контролируйте бизнес и повышайте прибыль</h3>
+              <p>
+                Для этого используйте блок аналитики. Пробуйте разные варианты
+                повышения продаж – новые товары, изменение наценки,
+                перераспределение площади. Убедиться в правильности действий
+                помогут отчеты. Блок аналитики доступен через Интернет и сделан
+                как приборная панель индикаторов деятельности, что позволяет
+                быстро заметить изменения.
+              </p>
+            </div>
+          </div>
+        </div>
       </section>
     </main>
     <div class="container"></div>
   </body>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    var swiper = new Swiper(".swiper", {
+      slidesPerView: 3,
+      direction: getDirection(),
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      on: {
+        resize: function () {
+          swiper.changeDirection(getDirection());
+        },
+      },
+    });
+
+    function getDirection() {
+      var windowWidth = window.innerWidth;
+      var direction = window.innerWidth <= 760 ? "vertical" : "horizontal";
+
+      return direction;
+    }
+  </script>
 </html>
